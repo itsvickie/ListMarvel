@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen>
+      <ion-card *ngFor= 'let marvels of marvel'>
+        <img src="{{marvels.thumbnail.path}}.{{marvels.thumbnail.extension}}"/>
+        <ion-card-header>
+          <ion-card-subtitle>{{marvels.name}}</ion-card-subtitle>
+          <ion-card-title>{{marvels.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{marvels.description}}
+        </ion-card-content>
+      </ion-card>
+  </ion-content>
+
+</ion-content>
